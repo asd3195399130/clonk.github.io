@@ -57,6 +57,122 @@ let arr = [
       },
     ],
   },
+{
+    id: 2,
+    name: "张三",
+    result: [
+      {
+        date: "2023-3-31",
+        classify: [
+          {
+            course: "机试",
+            score: 50,
+          },
+          {
+            course: "笔试",
+            score: 0,
+          },
+        ],
+      },
+      {
+        date: "2023-4-7",
+        classify: [
+          {
+            course: "机试",
+            score: 75,
+          },
+          {
+            course: "笔试",
+            score: 66,
+          },
+        ],
+      },
+      {
+        date: "2023-4-14",
+        classify: [
+          {
+            course: "机试",
+            score: 66,
+          },
+          {
+            course: "笔试",
+            score: 0,
+          },
+        ],
+      },
+      {
+        date: "2023-4-21",
+        classify: [
+          {
+            course: "机试",
+            score: 90,
+          },
+          {
+            course: "笔试",
+            score: 55,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 3,
+    name: "李四",
+    result: [
+      {
+        date: "2023-3-31",
+        classify: [
+          {
+            course: "机试",
+            score: 50,
+          },
+          {
+            course: "笔试",
+            score: 0,
+          },
+        ],
+      },
+      {
+        date: "2023-4-7",
+        classify: [
+          {
+            course: "机试",
+            score: 75,
+          },
+          {
+            course: "笔试",
+            score: 66,
+          },
+        ],
+      },
+      {
+        date: "2023-4-14",
+        classify: [
+          {
+            course: "机试",
+            score: 66,
+          },
+          {
+            course: "笔试",
+            score: 0,
+          },
+        ],
+      },
+      {
+        date: "2023-4-21",
+        classify: [
+          {
+            course: "机试",
+            score: 50,
+          },
+          {
+            course: "笔试",
+            score: 65,
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 let array = [
