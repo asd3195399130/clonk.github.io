@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./layui-v2.6.8/layui/css/layui.css" />
+    <script src="./layui-v2.6.8/layui/layui.js"></script>
+  </head>
+  <style>
+    #main {
+      width: 600px;
+      height: 500px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 1px solid red;
+      display: none;
+      background:url("https://ts1.cn.mm.bing.net/th/id/R-C.d88442788ee5a458d50e40f0a8cb1e05?rik=EoPp8GhejYeQfw&riu=http%3a%2f%2fimg.pconline.com.cn%2fimages%2fupload%2fupc%2ftx%2fwallpaper%2f1307%2f10%2fc2%2f23151595_1373424485102.jpg&ehk=J7xq%2f50bCmdD4jUXfnTlau2s5WiVsBxQArAjvJzqIo4%3d&risl=&pid=ImgRaw&r=0") no-repeat;
+      background-size: auto;
+    }
+    #school {
+      width: 100px;
+      height: 50px;
+    }
+    #suit {
+      width: 200px;
+      height: 50px;
+    }
+    #sumbit,
+    #alter {
+      width: 400px;
+      height: 400px;
+      background: url("https://ts1.cn.mm.bing.net/th?id=OIP-C.kJE5c2uL7he1BwdQb3-APAHaNK&w=187&h=333&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2")
+        no-repeat;
+      background-size: cover;
+      box-shadow: 10px 10px 10px black;
+      border: 1px solid black;
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    h2 {
+      color: snow;
+    }
+    table {
+      width: 80%;
+      border-collapse: collapse;
+      border-spacing: 0;
+      border: 1px solid #71361d;
+    }
+    th,
+    td {
+      height: 50px;
+      text-align: center;
+    }
+    tbody tr:hover{
+      background-color: #bbb5ac;
+    }
+  </style>
+  <body>
+    <div id="main"></div>
+    <button type="button" class="layui-btn layui-btn-sm" id="school">
+      添加学生
+    </button>
+<!-- 搜索 -->
+    <input
+      type="text"
+      name=""
+      id="sou"
+      placeholder="请输入名字"
+      style="
+        width: 200px;
+        height: 50px;
+        margin: 0 20px;
+        font-size: 20px;
+        font-weight: 900;
+
+      "
+      value="" 
+      />
+    <button type="button" class="layui-btn layui-btn-1g" id="seek">搜索</button>
+    <div id="sumbit">
+      <form action="#">
+        <h2>学生名字</h2>
+        <br /><br />
+        <input
+          type="text"
+          name=""
+          id="suit"
+          placeholder="请输入名字"
+          value="" />
+        <button type="button" class="layui-btn layui-btn-warm" id="upsubmit">
+          立即提交
+        </button>
+      </form>
+    </div>
+    <div id="alter"></div>
+    <table border="1">
+      <thead>
+        <tr>
+          <th rowspan="2" style="width: 70px">
+            <input type="checkbox" name="" id="first-input" />
+          </th>
+          <th rowspan="2">姓名</th>
+          <th>3.31</th>
+          <th colspan="3" style="text-align: center">4.7</th>
+          <th style="text-align: center">4.14</th>
+          <th colspan="3" style="text-align: center">4.21</th>
+          <th rowspan="2">教学平均分</th>
+          <th rowspan="2" style="text-align: center">操作</th>
+        </tr>
+        <tr>
+          <th>机试成绩</th>
+          <th>笔试成绩</th>
+          <th>机试成绩</th>
+          <th>平均分</th>
+          <th>机试成绩</th>
+          <th>笔试成绩</th>
+          <th>机试成绩</th>
+          <th>平均分</th>
+        </tr>
+        <tbody></tbody>
+      </thead>
+    </table>
+    <button type="button" class="layui-btn layui-btn-warm" id="delAll">批量删除</button>
+  </body>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.js"></script>
+  <script src="./echarts/echarts.min.js"></script>
+  <script src="./成绩.js"></script>
+  <script>
+    $("#sumbit").hide();
+      $("#alter").hide();
+      var ars = []
+      let  ars1=localStorage.getItem('arr')
+      ars1=JSON.parse(ars1)
+      $(function(){
+       console.log(ars1);
+        fun(ars1)
+      })
+      //添加
+      btnFun();
+      function btnFun() {
+        $("#school").click(function () {
+          $("#sumbit").toggle();
+          $('#suit').val("")
+          
+          txFun()
+        });
+      }
+         //搜索
+      function ssFun(){
+        $('#seek').click(function(){
+           let a= $('#sou').val();
+          let res=ars.filter((item)=>{
+        return item.names.includes(a)
+       })
+      fun(res)
+        })
+        
+      }
+       ssFun()
+function txFun(){
+ $('#upsubmit').off().click(function(e){
+        e.preventDefault()
+            
+       let a= $('#suit').val();
+      
+     let n=array.filter((item)=>{
+        return item.names==a
+       })
+       
+let isContained = false; // 定义一个变量记录是否包含
+
+for(let i=0; i<ars.length; i++){
+  let obj = ars[i];
+  if(JSON.stringify(obj) === JSON.stringify(n[0])){ // 判断两个对象是否相等
+    isContained = true;
+    break; // 如果找到了就退出循环
+  }
+}
+      
+       if(!array.includes(n[0])){
+             alert('学生信息不存在')
+             
+       }else if(isContained == true){
+        alert('学生信息已存在表格中')
+       }else{
+               ars.push(n[0])
+        localStorage.setItem('arr', JSON.stringify(ars))
+         ars1=localStorage.getItem('arr')
+      ars1=JSON.parse(ars1)
+        fun(ars1)
+          $("#sumbit").toggle();
+        }   
+       })}
+
+      //点击事件
+      $("tbody").on("click", "button", function (e) {
+        let index = e.target.dataset.index;
+        if (e.target.innerHTML == "查看成绩图标") {
+              $("#main").toggle()
+              icon(index)
+        }
+        if (e.target.innerHTML == "删除") {
+          if (confirm("确定删除吗")) {
+            ars.splice(index, 1);
+             localStorage.setItem('arr', JSON.stringify(ars))
+            fun(ars);
+          }
+        }
+        if (e.target.innerHTML == "编辑") {
+               $("#alter").toggle();
+               $('#alter').html(`
+                 <h2>学生名字</h2>
+      <input
+        type="text"
+        name="user"
+        placeholder="请输入名字"
+        style="width: 100px"
+        id="username"
+      /><br /><br />
+
+       <label= class="Text">3.31机试</label=>
+      <input
+        type="text"
+        name="us"
+        placeholder="请输入名字"
+        style="width: 100px"
+      /><br /><br />
+       <label=  class="Text">4.7笔试</label=>
+      <input
+        type="text"
+        name="us"
+        placeholder="请输入名字"
+        style="width: 100px"
+      /><br /><br />
+        <label=  class="Text">4.7机试</label=>
+      <input
+        type="text"
+        name="us"
+        placeholder="请输入名字"
+        style="width: 100px"
+      /><br /><br />
+      <label=  class="Text">4.7平均分</label=>
+      <input
+        type="text"
+        name="us"
+        placeholder="请输入名字"
+        style="width: 100px"
+      /><br /><br />
+      <label=  class="Text">4.14机试</label=>
+      <input
+        type="text"
+        name="us"
+        placeholder="请输入名字"
+        style="width: 100px"
+      /><br /><br />
+        <label=  class="Text">4.21机试</label=>
+      <input
+        type="text"
+        name="us"
+        placeholder="请输入名字"
+        style="width: 100px"
+      /><br /><br />
+        <label=  class="Text">4.21笔试</label=>
+      <input
+        type="text"
+        name="us"
+        placeholder="请输入名字"
+        style="width: 100px"
+      /><br /><br />
+      <label=  class="Text">4.21平均分</label=>
+      <input
+        type="text"
+        name="us"
+        placeholder="请输入名字"
+        style="width: 100px"
+      /><br /><br />
+      <label=  class="Text">教学平均分</label=>
+      <input
+        type="text"
+        name="us"
+        placeholder="请输入名字"
+        style="width: 100px"
+      /><br /><br />
+        <button type="submit" id="amend" class = "layui-btn">修改</button>
+               `)
+         $("#username").val(ars[index].names)
+         let res;
+      var inputs = $('input[name="us"]') // 获取所有 input 对象
+       for (var i = 0; i < ars[index].classify.length && i < inputs.length; i++) {
+    $(inputs[i]).val(ars[index].classify[i]); // 将 arr 中的值依次赋值给 input
+          }
+       //提交修改
+       $("#amend").click(function(e){
+       for (var i = 0; i < ars[index].classify.length && i < inputs.length; i++) {
+             ars[index].classify[i]=+inputs[i].value 
+             
+       }
+    
+       localStorage.setItem('arr', JSON.stringify(ars))
+      fun(ars)
+   $("#alter").toggle();
+       })
+        }
+      });
+      //字体颜色
+      
+      function ysFun(){
+         [...$("tbody td")].forEach((item)=>{
+            
+           if(item.innerHTML<50){
+            $(item).css('color','red')
+           }else if(item.innerHTML>90){
+            $(item).css('color','purple')
+           }
+         })
+      }
+      //显示数据
+      function fun(a=ars1) {
+        console.log(ars1);
+        let html = "";
+        [...a].forEach((item, index) => {
+          html += `
+          <tr>
+          <td><input type="checkbox" name="${index}" id="" data-index="${index}"/></td>
+          <td>${item.names}</td>
+          <td>${item.classify[0]}</td>
+          <td>${item.classify[1]}</td>
+          <td>${item.classify[2]}</td>
+          <td>${item.classify[3]}</td>
+          <td>${item.classify[4]}</td>
+          <td>${item.classify[5]}</td>
+          <td>${item.classify[6]}</td>
+          <td>${item.classify[7]}</td>
+          <td>${item.classify[8]}</td>
+
+           <td>
+            <button class="layui-btn" data-index="${index}">删除</button>
+            <button class="layui-btn" data-index="${index}">编辑</button>
+            <button class="layui-btn" data-index="${index}">查看成绩图标</button>
+          </td>
+          </tr>
+                `;
+        });
+
+        $("tbody").html(html);
+          ysFun()
+      }
+    </script>
+    <script>
+      function icon(n){
+        var myChart,
+      options,
+      index = 0;
+
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById("main"));
+    let xData = getXdata();
+    
+    // 指定图表的配置项和数据
+    var option = {
+      title: {
+        text: `考试成绩`,
+      },
+      tooltip: {},
+      legend: {
+        data: ["机试", "笔试"],
+      },
+      xAxis: {
+        data: xData,
+      },
+      yAxis: {},
+      series: Score(index),
+ 
+    };
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+        console.log(getXdata());
+    function getXdata() {
+    
+      let res = arr[0].result.map((item) => {
+        return item.data;
+      });
+      return res;
+      
+    }
+    
+    function Score(index) {
+      return [
+        {
+          label: {
+            show: true,
+            position: "top",
+          },
+          data: chengji(),
+          name: "机试",
+          type: "bar",
+        },
+        {
+          label: {
+            show: true,
+            position: "top",
+          },
+          data: hengji(),
+          name: "笔试",
+          type: "bar",
+        },
+      ];
+    }
+    function sss(){
+     
+    }
+    console.log(sss());
+    function chengji() {
+        let a=[ars[n].classify[0],ars[n].classify[2],ars[n].classify[4],ars[n].classify[6]]
+console.log(a);
+      return a
+    }
+    function hengji() {
+  let a=[0,ars[n].classify[1],0,ars[n].classify[5]]
+  
+      return a;
+    }
+  }
+  //批量删除
+  $("#first-input").click(function(){
+    
+    if($(this).prop('checked')){
+  $("input[type='checkbox']").prop('checked',true)
+    }else{
+        $("input[type='checkbox']").prop('checked',false)
+    }
+  
+  })
+   $("tbody").on("click", "input", function () {
+          let i = 0;
+          $("tbody input").each(function () {
+            if ($(this).prop("checked") == true) {
+              i++;
+            }
+          });
+          if (i == ars.length) {
+            $("#first-input").prop("checked", true);
+          } else {
+            $("#first-input").prop("checked", false);
+          }
+        });
+     $("#ssbtn").click(function(){
+           $("tbody input").each(function () {
+            if ($(this).prop("checked") == true) {
+                   let a=$(this).prop('name')
+                   console.log(a);
+                ars.splice(a,1)
+                fun(ars)   
+            } 
+          })
+     })   
+    </script>
+</html>
