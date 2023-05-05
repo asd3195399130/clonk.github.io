@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    #box {
+      width: 100%;
+      height: 500px;
+      border: 1px solid gold;
+
+      overflow: hidden;
+      position: relative;
+    }
+    img {
+      width: 100%;
+      height: 500px;
+    }
+    a {
+      display: none;
+    }
+    a.first {
+      display: block;
+    }
+    .bg {
+      width: 347px;
+      height: 500px;
+      background-color: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      right: 50px;
+      bottom: 1px;
+      border-radius: 10px;
+    }
+    .txt {
+      width: 347px;
+      height: 500px;
+      position: absolute;
+      right: 50px;
+      bottom: 1px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    ul li {
+      list-style: none;
+      width: 347px;
+      height: 60px;
+      /* background-color: #6dc42fb7; */
+      text-align: center;
+      line-height: 60px;
+      color: #fff;
+      font-size: 19px;
+      border-bottom: 1px solid beige;
+      text-indent: 5px;
+      font-family: "楷体";
+      cursor: pointer;
+      /* border-radius: 10px; */
+    }
+    li.curr {
+      background-color: #6dc42fb7;
+    }
+    li:last-child {
+      border: none;
+    }
+  </style>
+  <body>
+    <div id="box">
+      <div class="img">
+        <!----存放图片-->
+        <a href="#" class="first">
+          <img
+            src="https://tse2-mm.cn.bing.net/th/id/OIP-C.1bw90VHVGp1dAn_M6YeBZQHaEp?w=270&h=180&c=7&r=0&o=5&pid=1.7"
+            alt="" />
+        </a>
+        <a href="#">
+          <img
+            src="https://img0.baidu.com/it/u=3357079576,2481771964&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=750"
+            alt=""
+        /></a>
+        <a href="#">
+          <img
+            src="https://tse4-mm.cn.bing.net/th/id/OIP-C.t_TWNfjhG7qQUGBxGFtaEgHaKY?w=197&h=276&c=7&r=0&o=5&pid=1.7"
+            alt="" />
+        </a>
+        <a href="#">
+          <img
+            src="https://tse3-mm.cn.bing.net/th/id/OIP-C.Vr_EU76uxsrKNIAeRDCg9QHaHa?w=197&h=197&c=7&r=0&o=5&pid=1.7"
+            alt="" />
+        </a>
+        <a href="#">
+          <img
+            src="https://tse1-mm.cn.bing.net/th/id/OIP-C.aN-Sy8vrcf0iV5QXvb2iDwAAAA?w=199&h=171&c=7&r=0&o=5&pid=1.7"
+            alt="" />
+        </a>
+        <a href="#">
+          <img
+            src="https://tse3-mm.cn.bing.net/th/id/OIP-C.myjrMyCxMzrgb23h8iazSQHaEH?w=320&h=180&c=7&r=0&o=5&pid=1.7"
+            alt="" />
+        </a>
+        <a href="#">
+          <img
+            src="https://img2.baidu.com/it/u=3248476799,617089089&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=750"
+            alt="" />
+        </a>
+        <a href="#">
+          <img
+            src="https://tse4-mm.cn.bing.net/th/id/OIP-C.vHWaKA6DTVtXu84X0_pOXQHaKY?w=197&h=276&c=7&r=0&o=5&pid=1.7"
+            alt="" />
+        </a>
+      </div>
+      <div class="bg"></div>
+      <div class="txt">
+        <ul>
+          <li class="curr">熊出没</li>
+          <li>写真美女</li>
+          <li>斗破苍穹</li>
+          <li>全职高手</li>
+          <li>神雕侠侣</li>
+          <li>不良人</li>
+          <li>长腿美女</li>
+          <li>一念永恒</li>
+        </ul>
+      </div>
+      <!----存放内容-->
+    </div>
+  </body>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.js"></script>
+  <script>
+    var _index = 0;
+    $("ul li").hover(function () {
+      //   alert("666");
+      _index = $(this).index();
+      $(this).addClass("curr").siblings().removeClass();
+      $("a").eq(_index).fadeIn().siblings().hide();
+    });
+    setInterval(function () {
+      $("ul li").eq(_index).addClass("curr").siblings().removeClass();
+      $("a").eq(_index).fadeIn().siblings().hide();
+      _index++;
+      if (_index > 8) {
+        _index = 0;
+      }
+    }, 1000);
+  </script>
+</html>

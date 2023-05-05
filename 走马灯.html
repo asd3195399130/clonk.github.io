@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+    a,
+    img {
+      border: 0;
+    }
+    body {
+      font: 12px/180% Arial, Helvetica, sans-serif, "新宋体";
+    }
+
+    /* jswbox */
+    #jswbox {
+      width: 1100px;
+      height: 600px;
+      margin: 0 auto;
+      position: relative;
+    }
+    #jswbox ul {
+      position: relative;
+      height: 600px;
+    }
+    #jswbox li {
+      position: absolute;
+      width: 0;
+      height: 0;
+      z-index: 0;
+      cursor: pointer;
+      overflow: hidden;
+      top: 152px;
+      left: 10px;
+    }
+    #jswbox li img {
+      width: 100%;
+      height: 100%;
+      vertical-align: top;
+      float: left;
+    }
+    #jswbox .prev,
+    #jswbox .next {
+      display: none;
+    }
+  </style>
+  <script src="ZoomPic.js"></script>
+  <body>
+    <div id="jswbox">
+      <pre class="prev">prev</pre>
+
+      <pre class="next">next</pre>
+
+      <ul>
+        <li>
+          <img
+            src="https://img2.baidu.com/it/u=3953672224,3880649038&fm=253&fmt=auto&app=138&f=JPEG?w=333&h=500" />
+        </li>
+
+        <li>
+          <img
+            src="https://img2.baidu.com/it/u=1577670247,3027268005&fm=253&fmt=auto&app=120&f=JPEG?w=1200&h=750" />
+        </li>
+
+        <li>
+          <img
+            src="https://img0.baidu.com/it/u=1163873094,2888266758&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=750" />
+        </li>
+
+        <li>
+          <img
+            src="https://img1.baidu.com/it/u=3855134354,1163106141&fm=253&fmt=auto&app=138&f=JPEG?w=250&h=350g" />
+        </li>
+
+        <li>
+          <img
+            src="https://img1.baidu.com/it/u=645501468,3735429585&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=693" />
+        </li>
+
+        <li>
+          <img
+            src="https://img0.baidu.com/it/u=554882526,932132607&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=752" />
+        </li>
+
+        <li>
+          <img
+            src="https://img1.baidu.com/it/u=2547777462,1214300622&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=667" />
+        </li>
+      </ul>
+    </div>
+  </body>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script>
+    $(function () {
+      new ZoomPic("jswbox");
+    });
+  </script>
+</html>

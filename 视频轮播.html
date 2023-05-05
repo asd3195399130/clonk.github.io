@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="html.css" />
+
+    <!-- Demo styles -->
+    <style>
+      body {
+        background-color: #000;
+        color: #fff;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        position: relative;
+        margin-top: 100px;
+        width: 100%;
+        height: 600px;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #000;
+
+        /* Center slide text vertically; */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+      .swiper-slide {
+        width: 100%;
+        height: 400px;
+      }
+      .swiper-slide img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 350px;
+      }
+      .swiper-slide h4 {
+        position: absolute;
+        top: 340px;
+        left: 0;
+        z-index: 99;
+        font-size: 18px;
+        font-weight: 100;
+      }
+      .swiper-slide p {
+        position: absolute;
+        top: 380px;
+        left: 0;
+        z-index: 99;
+        font-size: 12px;
+      }
+      #btn1 {
+        position: absolute;
+        top: 185px;
+        z-index: 99999999999999999999999999;
+      }
+      #btn2 {
+        position: absolute;
+        top: 185px;
+        z-index: 99999999999999999999999999;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-button-next" id="btn1"></div>
+      <div class="swiper-button-prev" id="btn2"></div>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img
+            src="https://tse1-mm.cn.bing.net/th/id/OIP-C.gNLHF9kBkHIYwAXRH5q3eQHaE7?w=253&h=180&c=7&r=0&o=5&pid=1.7"
+            alt="" />
+          <h4>县委大院</h4>
+          <p>展现基层干群风貌</p>
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://tse3-mm.cn.bing.net/th/id/OIP-C.eRSd0yhmADlLwr5kgX9gXwHaKl?w=198&h=282&c=7&r=0&o=5&pid=1.7"
+            alt="" />
+          <h4>人民的名义</h4>
+          <p>由中国最高人民法院创作</p>
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://tse3-mm.cn.bing.net/th/id/OIP-C.n0Uv4fbw-t-DW7EV2Rjc7AHaJk?w=122&h=180&c=7&r=0&o=5&pid=1.7"
+            alt="" />
+          <h4>卿卿日常</h4>
+          <p>先婚后爱双向攻略</p>
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://tse2-mm.cn.bing.net/th/id/OIP-C.wUnaOomrfyCXKlWTV8fhKQHaKY?w=123&h=180&c=7&r=0&o=5&pid=1.7"
+            alt="" />
+          <h4>中国出了个毛泽东</h4>
+          <p>毛主席转战陕北到解放时期的故事</p>
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://tse4-mm.cn.bing.net/th/id/OIP-C.PppF988q7KkYlHneDfYwpgHaKU?w=127&h=180&c=7&r=0&o=5&pid=1.7"
+            alt="" />
+          <h4>谢谢你医生</h4>
+          <p>生命保卫战拉开帷幕</p>
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://tse4-mm.cn.bing.net/th/id/OIP-C.KM9RsdKhmdm8uTadvFmXgwHaKa?w=198&h=279&c=7&r=0&o=5&pid=1.7"
+            alt="" />
+          <h4>最美逆行者</h4>
+          <p>疫情期间的故事</p>
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://tse3-mm.cn.bing.net/th/id/OIP-C.WotQ_SrL2WUe-xkLFjTaLAHaKX?w=122&h=180&c=7&r=0&o=5&pid=1.7"
+            alt="" />
+          <h4>大秦帝国</h4>
+          <p>秦朝的开始与结尾</p>
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="data:image/jpeg;base64,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"
+            alt="" />
+          <h4>朱元璋</h4>
+          <p>从草根到皇帝的传奇</p>
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://tse1-mm.cn.bing.net/th/id/OIP-C.Hj9GyEl9S-59viN_w1hqLAHaKe?w=118&h=180&c=7&r=0&o=5&pid=1.7"
+            alt="" />
+          <h4>遇见你之后</h4>
+          <p>周峻纬金子璇治愈甜恋</p>
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://tse4-mm.cn.bing.net/th/id/OIP-C.tThN8b2IIAfZMZ8hgv0__QHaFH?w=198&h=137&c=7&r=0&o=5&pid=1.7"
+            alt="" />
+          <h4>精灵宝可梦</h4>
+          <p>大家都去收服宝可梦吧</p>
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://tse1-mm.cn.bing.net/th/id/OIP-C.W7kjZ3yxtH7OhZLuP-OIDgAAAA?w=134&h=180&c=7&r=0&o=5&pid=1.7"
+            alt="" />
+          <h4>我的秘密室友</h4>
+          <p>时空融合 奇幻爱旅</p>
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://tse1-mm.cn.bing.net/th/id/OIP-C.l1GqkUybgebYx68UL1F3tQHaEK?w=291&h=180&c=7&r=0&o=5&pid=1.7"
+            alt="" />
+          <h4>我的世界</h4>
+          <p>一起来创造吧</p>
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://tse1-mm.cn.bing.net/th/id/OIP-C.RYLNwcL8C1VFmgqLMMP78QAAAA?w=127&h=180&c=7&r=0&o=5&pid=1.7"
+            alt="" />
+          <h4>请君</h4>
+          <p>任嘉伦李沁千年寻爱</p>
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://tse4-mm.cn.bing.net/th/id/OIP-C.trElVTO06ZRs38HbfhtMOAHaMt?w=115&h=180&c=7&r=0&o=5&pid=1.7"
+            alt="" />
+          <h4>那小子不可爱</h4>
+          <p>啼笑皆非超光速恋爱</p>
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://tse4-mm.cn.bing.net/th/id/OIP-C.xOF-9NdN5ls2bF6ZJ7CX0gHaKY?w=198&h=278&c=7&r=0&o=5&pid=1.7"
+            alt="" />
+          <h4>哆啦a梦</h4>
+          <p>神奇的口袋有许多道具</p>
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://tse3-mm.cn.bing.net/th/id/OIP-C.qEiSCOP7FsEvxByngvW-LAHaJO?w=198&h=246&c=7&r=0&o=5&pid=1.7"
+            alt="" />
+          <h4>熊出没之过年</h4>
+          <p>熊大熊二一起送光头强回家的故事</p>
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://tse3-mm.cn.bing.net/th/id/OIP-C.falZtK1ANrqCACbCZAVppwHaD8?w=338&h=180&c=7&r=0&o=5&pid=1.7"
+            alt="" />
+          <h4>神奇动物在哪里3</h4>
+          <p>巫师麻瓜组团开战</p>
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://tse1-mm.cn.bing.net/th/id/OIP-C.19qW1VX9G6s582hm3UCLBQHaKX?w=198&h=277&c=7&r=0&o=5&pid=1.7"
+            alt="" />
+          <h4>熊出没之变形记</h4>
+          <p>强爸喊你回家过年</p>
+        </div>
+      </div>
+
+      <!-- <div class="swiper-pagination"></div> -->
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 6,
+        spaceBetween: 30,
+        slidesPerGroup: 6,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>
