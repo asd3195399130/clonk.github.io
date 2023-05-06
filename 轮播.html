@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.css" />
+
+    <!-- Demo styles -->
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #000;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+        position: relative;
+      }
+
+      .swiper {
+        width: 50%;
+        height: 50%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #000;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 50%;
+        height: 50%;
+        object-fit: cover;
+      }
+
+      body {
+        background: #000;
+        color: #000;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 500px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .swiper-slide {
+        background-size: cover;
+        background-position: center;
+      }
+
+      .mySwiper2 {
+        height: 80%;
+        width: 100%;
+      }
+
+      .mySwiper {
+        height: 20%;
+        box-sizing: border-box;
+        padding: 10px 0;
+      }
+
+      .mySwiper .swiper-slide {
+        width: 25%;
+        height: 100%;
+        opacity: 0.4;
+      }
+
+      .mySwiper .swiper-slide-thumb-active {
+        opacity: 1;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+      }
+      .img {
+        position: absolute;
+        right: 50px;
+        top: 20px;
+        width: 300px;
+        height: 200px;
+        margin-left: 50px;
+        border-radius: 10px;
+        border: 1px solid snow;
+        border: none;
+      }
+      .img a {
+        text-decoration: none;
+        color: #fff;
+      }
+      .look {
+        width: 200px;
+        height: 30px;
+        border: 1px solid snow;
+        position: absolute;
+        left: 50%;
+        bottom: 15px;
+        border: none;
+      }
+      .look a {
+        text-decoration: none;
+        color: snow;
+        margin-left: 16px;
+      }
+      .swiper-button-disabled {
+        opacity: 0 !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Swiper -->
+
+    <div
+      style="--swiper-navigation-color: #ccc; --swiper-pagination-color: #fff"
+      class="swiper mySwiper2">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="look">
+            <a href="#">保存</a>
+            <a
+              href="https://img.zcool.cn/community/01b9b560ab0c6e11013eaf706ca5e6.jpg@1280w_1l_2o_100sh.jpg"
+              >查看图片</a
+            >
+          </div>
+
+          <img
+            src="https://img.zcool.cn/community/01b9b560ab0c6e11013eaf706ca5e6.jpg@1280w_1l_2o_100sh.jpg" />
+          <div class="img">
+            <a href="https://www.zcool.com.cn/work/ZNTI4NzkxMjQ=.html">
+              应天门是隋唐洛阳城·宫城——紫微城的正南门，俗称五凤楼。始建于隋大业元年（605年），原名则天门，神龙元年（705年）避武则天讳改称应天门。
+            </a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="look">
+            <a href="#">保存</a>
+            <a
+              href="https://img.zcool.cn/community/01ad2b60ab0c6c11013f4720df1851.jpg@1280w_1l_2o_100sh.jpg"
+              >查看图片</a
+            >
+          </div>
+          <img
+            src="https://img.zcool.cn/community/01ad2b60ab0c6c11013f4720df1851.jpg@1280w_1l_2o_100sh.jpg" />
+          <div class="img">
+            <a href="https://www.zcool.com.cn/work/ZNTI4NzkxMjQ=.html">
+              应天门是朝廷举行登基、改元、大赦、宴会等外朝大典的场所，唐高宗曾在此诏释百济国王扶余义慈、武则天曾在此登基称帝，功能类似北京午门。亦是接见日本遣隋使、遣唐使等万国来朝之所，1985年全日本文化团体联合会等在应天门遗址建立“日本国遣隋使遣唐使访都之地”纪念碑亭。
+            </a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="look">
+            <a href="#">保存</a>
+            <a
+              href="https://img.zcool.cn/community/01b25260ab0c6c11013f4720736556.jpg@1280w_1l_2o_100sh.jpg"
+              >查看图片</a
+            >
+          </div>
+          <img
+            src="https://img.zcool.cn/community/01b25260ab0c6c11013f4720736556.jpg@1280w_1l_2o_100sh.jpg" />
+          <div class="img">
+            <a href="https://www.zcool.com.cn/work/ZNTI4NzkxMjQ=.html">
+              应天门是一座由门楼、朵楼和东西阙楼及其间的廊庑为一体的“凹”字形巨大建筑群，东西长达137米，两侧阙高36.4米，有今天十三层楼高。门有两重观，上题“紫微观”；建有崇楼五座，似五只凤凰，故称“五凤楼”；城楼下开有三个门道，中为御道，左入右出；门前置有象征皇家威仪的双向三出阙，东西两边共计十二阙，是古代城门建制的最高等级、天子享用的最高礼制。
+            </a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="look">
+            <a href="#">保存</a>
+            <a
+              href="https://img.zcool.cn/community/010a5160ab0c6c11013f472071124b.jpg@1280w_1l_2o_100sh.jpg"
+              >查看图片</a
+            >
+          </div>
+          <img
+            src="https://img.zcool.cn/community/010a5160ab0c6c11013f472071124b.jpg@1280w_1l_2o_100sh.jpg" />
+          <div class="img">
+            <a href="https://www.zcool.com.cn/work/ZNTI4NzkxMjQ=.html">
+              应天门是中国古代规格最高的城门， [42]
+              其建制对北宋汴梁宣德门、元大都崇天门、明清故宫的午门影响深远，名称更被日本京都·应天门取用，
+              [43] 被誉为“隋唐第一门” [44] 、“天下第一门” [1]
+              ，在中国宫城建筑史上占有重要地位。
+            </a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="look">
+            <a href="#">保存</a>
+            <a
+              href="https://pic3.zhimg.com/v2-8b209a75b864387074926a988b736c7d_r.jpg?source=1940ef5c"
+              >查看图片</a
+            >
+          </div>
+          <img
+            src="https://pic3.zhimg.com/v2-8b209a75b864387074926a988b736c7d_r.jpg?source=1940ef5c" />
+          <div class="img">
+            <a href="https://www.zcool.com.cn/work/ZNTI4NzkxMjQ=.html">
+              2016年，应天门遗址保护展示工程开工，投资约2.1亿， [2]
+              由清华大学教授郭黛姮先生主持设计。2019年9月，应天门遗址博物馆正式对外开放。同年底成功申报国家AAAA级旅游景区。
+            </a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="look">
+            <a href="#">保存</a>
+            <a
+              href="https://img.zcool.cn/community/01269160ab0c6f11013eaf704cf482.jpg@1280w_1l_2o_100sh.jpg"
+              >查看图片</a
+            >
+          </div>
+          <img
+            src="https://img.zcool.cn/community/01269160ab0c6f11013eaf704cf482.jpg@1280w_1l_2o_100sh.jpg" />
+          <div class="img">
+            <a href="https://www.zcool.com.cn/work/ZNTI4NzkxMjQ=.html">
+              应天门所处位置：紫微城正南门。紫微城，是隋唐洛阳城·宫城(皇宫)，别称紫微宫，是隋、唐、武周帝国的大朝正宫、世界性政治中心和国家象征。唐代实行东西两京制。东都洛阳，是长安之外的另一个全国性的政治、经济和文化中心
+              [48]
+              ，位于神都洛阳西北隅至高之处，始建于隋炀帝大业元年（605年），前后沿用530余年，成为九朝理政之所，
+              [48]
+              是中国历史上沿用时间最长、使用朝代最多的皇宫。紫微城因象征天帝居所紫微宫而得名，是当时全世界最辉煌壮丽的宫殿群，尤其经武则天增修明堂、天堂后，成为世界奇观。紫微城占地面积约4.2平方公里，被誉为“万宫之宫”。
+            </a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="look">
+            <a href="#">保存</a>
+            <a
+              href="https://ts1.cn.mm.bing.net/th/id/R-C.8e211b252803f9cde06272ef7e22005d?rik=5qbkW%2bdedRr6Sw&riu=http%3a%2f%2f5b0988e595225.cdn.sohucs.com%2fimages%2f20190723%2f753bd1a73e2f4d8d97b27e45aa226b9a.JPG&ehk=FANFzn%2bBmkiTgbd%2fsN8NWYgzG0PXQ2nYMQP7ww4UfoM%3d&risl=&pid=ImgRaw&r=0"
+              >查看图片</a
+            >
+          </div>
+          <img
+            src="https://ts1.cn.mm.bing.net/th/id/R-C.8e211b252803f9cde06272ef7e22005d?rik=5qbkW%2bdedRr6Sw&riu=http%3a%2f%2f5b0988e595225.cdn.sohucs.com%2fimages%2f20190723%2f753bd1a73e2f4d8d97b27e45aa226b9a.JPG&ehk=FANFzn%2bBmkiTgbd%2fsN8NWYgzG0PXQ2nYMQP7ww4UfoM%3d&risl=&pid=ImgRaw&r=0" />
+          <div class="img">
+            <a href="https://www.zcool.com.cn/work/ZNTI4NzkxMjQ=.html">
+              应天门南与皇城正门端门、郭城正门定鼎门相对应，北与明堂、玄武门、龙光门相对应，处于隋唐洛阳城南北轴线上。
+            </a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="look">
+            <a href="#">保存</a>
+            <a
+              href="https://ts1.cn.mm.bing.net/th/id/R-C.60a742a2c8320173eaead31a91511c82?rik=t5iesFr2oJ758w&riu=http%3a%2f%2fimg.dahepiao.com%2fuploads%2fallimg%2f200106%2f138495-20010609311S93.jpg&ehk=Ze7Lyb8r0hQFsIjqINXZgvZD6sBJzJGsEOmzB0x5N8U%3d&risl=&pid=ImgRaw&r=0"
+              >查看图片</a
+            >
+          </div>
+          <img
+            src="https://ts1.cn.mm.bing.net/th/id/R-C.60a742a2c8320173eaead31a91511c82?rik=t5iesFr2oJ758w&riu=http%3a%2f%2fimg.dahepiao.com%2fuploads%2fallimg%2f200106%2f138495-20010609311S93.jpg&ehk=Ze7Lyb8r0hQFsIjqINXZgvZD6sBJzJGsEOmzB0x5N8U%3d&risl=&pid=ImgRaw&r=0" />
+          <div class="img">
+            <a href="https://www.zcool.com.cn/work/ZNTI4NzkxMjQ=.html">
+              在这座城楼上，隋炀帝开创了万国来朝，李世民下达过焚城令，唐高宗过问了“韩国政事”，武则天发表了登基演说，唐玄宗接见了日本遣唐使
+            </a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="look">
+            <a href="#">保存</a>
+            <a
+              href="https://youimg1.c-ctrip.com/target/100t180000014thvr963A.jpg"
+              >查看图片</a
+            >
+          </div>
+          <img
+            src="https://youimg1.c-ctrip.com/target/100t180000014thvr963A.jpg" />
+          <div class="img">
+            <a href="https://www.zcool.com.cn/work/ZNTI4NzkxMjQ=.html">
+              隋炀帝大业元年（605年），应天门始建，原名则天门，门上飞观相夹，门外即朝堂。
+              [7]
+              王世充开明元年（619年），王世充僭越称帝，国号郑，改则天门（应天门）为顺天门。
+              [22]
+            </a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="look">
+            <a href="#">保存</a>
+            <a
+              href="https://img.zcool.cn/community/0121aa60ab0c6c11013f47202d9251.jpg@1280w_1l_2o_100sh.jpg"
+              >查看图片</a
+            >
+          </div>
+          <img
+            src="https://img.zcool.cn/community/0121aa60ab0c6c11013f47202d9251.jpg@1280w_1l_2o_100sh.jpg" />
+          <div class="img">
+            <a href="https://www.zcool.com.cn/work/ZNTI4NzkxMjQ=.html">
+              唐高祖武德四年（621年），秦王李世民攻克洛阳后，命行台仆射屈突通焚应天门城楼。
+              [7]
+              唐高宗显庆初年（656年），命农少卿田仁汪重新修葺应天门楼。后又命司农少卿韦弘机更加营造。
+              [7]
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+    <div thumbsSlider="" class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img
+            src="https://img.zcool.cn/community/01b9b560ab0c6e11013eaf706ca5e6.jpg@1280w_1l_2o_100sh.jpg" />
+        </div>
+
+        <div class="swiper-slide">
+          <img
+            src="https://img.zcool.cn/community/01ad2b60ab0c6c11013f4720df1851.jpg@1280w_1l_2o_100sh.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://img.zcool.cn/community/01b25260ab0c6c11013f4720736556.jpg@1280w_1l_2o_100sh.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://img.zcool.cn/community/010a5160ab0c6c11013f472071124b.jpg@1280w_1l_2o_100sh.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://pic3.zhimg.com/v2-8b209a75b864387074926a988b736c7d_r.jpg?source=1940ef5c" />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://img.zcool.cn/community/01269160ab0c6f11013eaf704cf482.jpg@1280w_1l_2o_100sh.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://ts1.cn.mm.bing.net/th/id/R-C.8e211b252803f9cde06272ef7e22005d?rik=5qbkW%2bdedRr6Sw&riu=http%3a%2f%2f5b0988e595225.cdn.sohucs.com%2fimages%2f20190723%2f753bd1a73e2f4d8d97b27e45aa226b9a.JPG&ehk=FANFzn%2bBmkiTgbd%2fsN8NWYgzG0PXQ2nYMQP7ww4UfoM%3d&risl=&pid=ImgRaw&r=0" />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://ts1.cn.mm.bing.net/th/id/R-C.60a742a2c8320173eaead31a91511c82?rik=t5iesFr2oJ758w&riu=http%3a%2f%2fimg.dahepiao.com%2fuploads%2fallimg%2f200106%2f138495-20010609311S93.jpg&ehk=Ze7Lyb8r0hQFsIjqINXZgvZD6sBJzJGsEOmzB0x5N8U%3d&risl=&pid=ImgRaw&r=0
+         " />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://youimg1.c-ctrip.com/target/100t180000014thvr963A.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://img.zcool.cn/community/0121aa60ab0c6c11013f47202d9251.jpg@1280w_1l_2o_100sh.jpg" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        loop: false,
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+      var swiper2 = new Swiper(".mySwiper2", {
+        loop: false,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+          hiddenClass: "my-button-hidden",
+        },
+        on: {
+          slideChangeTransitionEnd: function () {
+            if (this.isEnd) {
+              this.navigation.$nextEl.css("display", "none");
+            } else {
+              this.navigation.$nextEl.css("display", "block");
+            }
+          },
+        },
+
+        thumbs: {
+          swiper: swiper,
+        },
+      });
+    </script>
+  </body>
+</html>
