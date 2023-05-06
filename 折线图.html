@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.4.2/echarts.common.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
   <style>
     #box {
       width: 600px;
@@ -14,36 +20,76 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      display: block;
-    }
-    #yeste {
-      width: 600px;
-      height: 500px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
     }
     #one {
-      width: 1000px;
-      height: 900px;
-      background-color: snow;
-      margin: auto;
+      width: 1200px;
+      height: 50px;
+      line-height: 50px;
+      background-color: saddlebrown;
+      margin-left: 100px;
+      padding: 0 50px;
+    }
+    button {
+      float: right;
+      margin: 20px;
+    }
+    button:hover {
+      background-color: blue;
+      border: none;
+    }
+    .one,
+    .two {
+      width: 200px;
+      height: 150px;
+      margin: 10px;
+      background-color: rgb(247, 247, 245);
+      text-align: center;
+      line-height: 50px;
+    }
+    .one {
+      position: absolute;
+      top: 100px;
+      left: 150px;
+    }
+    .nos {
+      width: 15px;
+      height: 15px;
+      background-color: red;
+      transform: translate(30px, 32px);
+    }
+    .two {
+      position: absolute;
+      top: 260px;
+      left: 150px;
+    }
+    .nos2 {
+      background-color: aquamarine;
     }
   </style>
   <body>
     <div id="one">
-      <div id="box"></div>
-      <button onclick="fun()">今天的温度</button>
-      <button onclick="btn()">昨天的温度</button>
-      <button onclick="dtn()">未来七天的温度</button>
-      <button onclick="fift()">未来三十天的气温</button>
+      天气气温温度
+      <button onclick="fun()">今天</button>
+      <button onclick="btn()">昨天</button>
+      <button onclick="dtn()">未来七天</button>
+      <button onclick="fift()">未来三十天</button>
+    </div>
+    <div id="box"></div>
+    <div class="one">
+      <div class="nos"></div>
+      <b>PV最高温</b>
+      <h2 class="hy">18</h2>
+    </div>
+    <div class="two">
+      <div class="nos2 nos"></div>
+      <b>UV最低温</b>
+      <h2 class="sy">10</h2>
     </div>
   </body>
-  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.js"></script>
-  <script src="./echarts/echarts.min.js"></script>
   <script>
     function fift() {
+      $(".sy").html("12");
+      $(".hy").html("33");
       var chartDom = document.getElementById("box");
 
       var myChart = echarts.init(chartDom);
@@ -143,6 +189,8 @@
     }
 
     function btn() {
+      $(".sy").html("6");
+      $(".hy").html("18");
       var chartDom = document.getElementById("box");
 
       var myChart = echarts.init(chartDom);
@@ -260,6 +308,8 @@
       option && myChart.setOption(option);
     }
     function dtn() {
+      $(".sy").html("12");
+      $(".hy").html("31");
       var chartDom = document.getElementById("box");
 
       var myChart = echarts.init(chartDom);
@@ -355,7 +405,8 @@
     }
 
     function fun() {
- 
+      $(".sy").html("10");
+      $(".hy").html("18");
       var chartDom = document.getElementById("box");
 
       var myChart = echarts.init(chartDom);
@@ -450,5 +501,98 @@
 
       option && myChart.setOption(option);
     }
+    var chartDom = document.getElementById("box");
+
+    var myChart = echarts.init(chartDom);
+    var option;
+
+    option = {
+      title: {
+        text: "今天的气温",
+      },
+      tooltip: {
+        trigger: "axis",
+      },
+      legend: {},
+      toolbox: {
+        show: true,
+        feature: {
+          dataZoom: {
+            yAxisIndex: "none",
+          },
+          dataView: { readOnly: false },
+          magicType: { type: ["line", "bar"] },
+          restore: {},
+          saveAsImage: {},
+        },
+      },
+      xAxis: {
+        type: "category",
+        boundaryGap: false,
+        data: [
+          "16:10",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00",
+        ],
+      },
+      yAxis: {
+        type: "value",
+        axisLabel: {
+          formatter: "{value} °C",
+        },
+      },
+      series: [
+        {
+          name: "最高温度",
+          type: "line",
+          data: [18, 17, 15, 16, 14, 18, 19, 11],
+          markPoint: {
+            data: [
+              { type: "max", name: "Max" },
+              { type: "min", name: "Min" },
+            ],
+          },
+          markLine: {
+            data: [{ type: "average", name: "Avg" }],
+          },
+        },
+        {
+          name: "最低温度",
+          type: "line",
+          data: [17, 16, 12, 15, 13, 12, 10, 10],
+          markPoint: {
+            data: [{ name: "周最低", value: -2, xAxis: 1, yAxis: -1.5 }],
+          },
+          markLine: {
+            data: [
+              { type: "average", name: "Avg" },
+              [
+                {
+                  symbol: "none",
+                  x: "90%",
+                  yAxis: "max",
+                },
+                {
+                  symbol: "circle",
+                  label: {
+                    position: "start",
+                    formatter: "Max",
+                  },
+                  type: "max",
+                  name: "最高点",
+                },
+              ],
+            ],
+          },
+        },
+      ],
+    };
+
+    myChart.setOption(option);
   </script>
 </html>
