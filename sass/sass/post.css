@@ -248,7 +248,7 @@ ul {
 
 .tab_title,
 .tabs2 {
-  border-bottom: solid #EAEAEE 1px;
+  border-bottom: solid #eaeaee 1px;
   clear: both;
   overflow: hidden;
   zoom: 1;
@@ -264,7 +264,7 @@ ul {
   text-align: center;
   line-height: 35px;
   font-size: 22px;
-  color: #2E2E30;
+  color: #2e2e30;
   cursor: pointer;
   margin-right: 14px;
 }
@@ -272,18 +272,18 @@ ul {
 .tab_title h2.on,
 .tabs2 a.active2 {
   padding: 0 14px;
-  border-bottom: solid #18AE66 4px;
+  border-bottom: solid #18ae66 4px;
   font-weight: bold;
 }
 
 .tab_title h2.on a {
-  color: #2E2E30;
+  color: #2e2e30;
   float: left;
   height: 37px;
   text-align: center;
   line-height: 35px;
   font-size: 22px;
-  color: #2E2E30;
+  color: #2e2e30;
   cursor: pointer;
   margin-right: 14px;
   padding: 0px 13px;
@@ -294,7 +294,7 @@ ul {
 }
 
 .tab_list ul.newfix {
-  border-bottom: 1px #EAEAEE solid;
+  border-bottom: 1px #eaeaee solid;
   height: 104px;
   margin-bottom: 20px;
 }
@@ -314,12 +314,12 @@ ul {
 
 .tab_list ul.newfix li #ReportIDname a,
 .tab_list ul.newfix li #ReportIDnewquota a {
-  color: #2E2E30;
+  color: #2e2e30;
   padding-left: 20px;
 }
 
 .tab_list ul.newfix li #ReportIDLogograph {
-  color: #8E8E92;
+  color: #8e8e92;
   line-height: 22px;
   font-size: 16px;
   padding-left: 18px;
@@ -344,11 +344,432 @@ ul {
 .tab_list ul.newfix li::before,
 .newlist li::before {
   content: "";
-  background: #D8D8DC;
+  background: #d8d8dc;
   width: 4px;
   height: 4px;
   position: absolute;
   top: 9px;
   left: 5px;
   border-radius: 4px;
+}
+
+.newlist li #ReportIDname {
+  float: left;
+}
+
+.newlist li #ReportIDIssueTime,
+.newlist li #StampIDrtime {
+  float: right;
+  color: #939393;
+  font-size: 12px;
+}
+
+.newlist li #ReportIDname a {
+  float: left;
+}
+
+.newlist li #ReportIDname a:hover,
+.newlist li #StampIDsubject a:hover {
+  color: #006d46;
+}
+
+.newlist li #ReportIDname .voice {
+  float: right;
+  width: 18px;
+  height: 10px;
+  background: url(/res/branch/structure/180562039.gif) no-repeat left top;
+  margin: 6px 0 0 6px;
+}
+
+.video {
+  width: 486px;
+  overflow: hidden;
+}
+
+.tel_v {
+  font-size: 22px;
+  color: #2e2e30;
+  position: relative;
+  padding-left: 15px;
+  margin: 0px 0 22px 0;
+  border-bottom: 1px solid #eaeaee;
+  height: 41px;
+}
+
+.tel_v:before {
+  content: "";
+  width: 8px;
+  height: 20px;
+  position: absolute;
+  left: 0px;
+  top: 7px;
+  background: #18ae66;
+  border-radius: 4px;
+}
+
+.video {
+  width: 486px;
+  overflow: hidden;
+  margin-left: 350px;
+}
+
+.tel_v {
+  font-size: 22px;
+  color: #2e2e30;
+  position: relative;
+  padding-left: 15px;
+  margin: 0px 0 22px 0;
+  border-bottom: 1px solid #eaeaee;
+  height: 41px;
+}
+
+.tel_v:before {
+  content: "";
+  width: 8px;
+  height: 20px;
+  position: absolute;
+  left: 0px;
+  top: 7px;
+  background: #18ae66;
+  border-radius: 4px;
+}
+
+.video {
+  width: 486px;
+  overflow: hidden;
+}
+
+.tel_v {
+  font-size: 22px;
+  color: #2e2e30;
+  position: relative;
+  padding-left: 15px;
+  margin: 0px 0 22px 0;
+  border-bottom: 1px solid #eaeaee;
+  height: 41px;
+}
+
+.tel_v:before {
+  content: "";
+  width: 8px;
+  height: 20px;
+  position: absolute;
+  left: 0px;
+  top: 7px;
+  background: #18ae66;
+  border-radius: 4px;
+}
+
+.video_p {
+  height: 314px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.video_p #VenuesIDSubject {
+  height: 40px;
+  color: #2e2e30;
+  font-size: 16px;
+  line-height: 40px;
+  text-align: left;
+  width: 100%;
+  display: block;
+  text-indent: 12px;
+  background: #f6f6fa;
+}
+
+.video_p #VenuesIDContent {
+  text-align: center;
+  width: 100%;
+  height: 274px;
+  overflow: hidden;
+  display: block;
+}
+
+.video_p #VenuesIDContent embed {
+  height: 274px;
+  width: 486px;
+}
+
+.left {
+  float: left;
+}
+
+.newlist li #ReportIDname {
+  float: left;
+}
+
+.newlist li #ReportIDIssueTime,
+.newlist li #StampIDrtime {
+  float: right;
+  color: #939393;
+  font-size: 12px;
+}
+
+.newlist li #ReportIDname a {
+  float: left;
+}
+
+.newlist li #ReportIDname a:hover,
+.newlist li #StampIDsubject a:hover {
+  color: #006d46;
+}
+
+.newlist li #ReportIDname .voice {
+  float: right;
+  width: 18px;
+  height: 10px;
+  background: url(/res/branch/structure/180562039.gif) no-repeat left top;
+  margin: 6px 0 0 6px;
+}
+
+.qywh {
+  width: 1150px;
+}
+
+.notice_active {
+  width: 100%;
+  height: 29px;
+  overflow: hidden;
+  position: relative;
+}
+
+.notice_active::before {
+  background: url(/res/ChinaPostJT/structure/2012677420.jpg) no-repeat;
+  content: "";
+  position: relative;
+  top: 10px;
+  left: 0px;
+  width: 16px;
+  height: 12px;
+  display: block;
+  float: left;
+}
+
+.notice_active ul {
+  width: 90%;
+  float: left;
+  margin-left: 5px;
+}
+
+.notice_active li {
+  font-size: 16px;
+  color: #2e2e30;
+  text-align: left;
+  line-height: 9px;
+}
+
+.notice_active li a {
+  color: #2e2e30;
+}
+
+.notice_active li a br {
+  display: none;
+}
+
+.s_more {
+  font-size: 12px;
+  float: right;
+  line-height: 30px;
+  color: #8e8e92;
+}
+
+.s_more a {
+  color: #8e8e92;
+}
+
+.nav_20 li .home {
+  color: #18ae66;
+  position: relative;
+}
+
+.nav_20 li .home a {
+  color: #18ae66;
+}
+
+.nav_20 li .home:before {
+  content: "";
+  width: 16px;
+  height: 4px;
+  background: #18ae66;
+  border-radius: 2px;
+  position: absolute;
+  bottom: -12px;
+  left: 24%;
+}
+
+.container {
+  margin-left: 350px;
+}
+
+.map {
+  width: 794px;
+  height: 558px;
+  margin: 20px auto;
+  background: #fff;
+  box-shadow: 0 2px 8px 0 rgba(2, 18, 40, 0.06);
+  border-radius: 4px;
+  margin-top: 15px;
+}
+
+.postInquiry {
+  width: 282px;
+  margin-right: 353px;
+}
+
+.tel_list li {
+  display: block;
+  height: 20px;
+  color: #2e2e30;
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.tel_list li #VenuesIDSubject {
+  float: left;
+}
+
+.tel_list li #VenuesIDContent {
+  float: left;
+  margin-left: 38px;
+  color: #18ae66;
+  font-weight: bold;
+}
+
+.rep-area {
+  display: block;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  background: #18ae66;
+  border-radius: 4px;
+  height: 48px;
+  line-height: 48px;
+  margin: 20px 0 52px 0;
+}
+
+.rep-area a {
+  color: #fff;
+}
+
+.qr_code {
+  width: 282px;
+  height: 242px;
+  background: #ffffff;
+}
+
+.qr_code {
+  width: 282px;
+  height: 242px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px 0 rgba(2, 18, 40, 0.06);
+  border-radius: 4px;
+}
+
+.qr_code li {
+  width: 50%;
+  float: left;
+  text-align: center;
+  height: auto;
+  display: block;
+  margin-top: 13px;
+}
+
+.qr_code li p {
+  width: 78px;
+  height: 78px;
+  text-align: center;
+  border: 1px solid #ccc;
+  margin: 0px auto 2px;
+  overflow: Hidden;
+}
+
+.qr_code li p img {
+  width: 100%;
+  height: auto;
+}
+
+.qr_code li span {
+  font-size: 12px;
+  color: #8e8e92;
+  line-height: 12px;
+}
+
+#Footer {
+  width: 1903px;
+  height: 100px;
+  overflow: hidden;
+  background: #f6f6fa;
+}
+
+.w1200 {
+  width: 1200px;
+  margin: auto;
+}
+
+.foot {
+  border-top: 1px solid #eaeaee;
+  text-align: center;
+}
+
+.foot p {
+  font-size: 12px;
+  color: #8e8e92;
+  line-height: 28px;
+  margin-top: 1px;
+}
+
+.foot p a {
+  margin-left: 30px;
+  color: #8e8e92;
+}
+
+.foot {
+  border-top: 1px solid #eaeaee;
+  text-align: center;
+}
+
+.foot p {
+  font-size: 12px;
+  color: #8e8e92;
+  line-height: 38px;
+}
+
+.foot p a {
+  margin-left: 30px;
+  color: #8e8e92;
+}
+
+.link {
+  width: 530px;
+  margin: auto;
+  padding: 10px 0;
+  text-align: center;
+  display: block;
+  overflow: hidden;
+}
+
+.link ul {
+  float: left;
+  margin-top: 1px;
+}
+
+.link ul li {
+  padding: 0px 20px;
+  font-size: 14px;
+  color: #2e2e30;
+  border-right: 1px solid #d8d8dc;
+  float: left;
+}
+
+.link ul li a {
+  color: #2e2e30;
+}
+
+h4 {
+  font-size: 16px;
+  color: #8e8e92;
 }/*# sourceMappingURL=post.css.map */
