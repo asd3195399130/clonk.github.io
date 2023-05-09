@@ -1,0 +1,359 @@
+body {
+  font-family: "Microsoft YaHei", "Pingfang CS", "Helvetica", "Arial";
+}
+img {
+  width: 129px;
+  height: 41.78px;
+  overflow:clip {
+    overflow-x: 15px;
+    overflow-y: 16px;
+  }
+}
+a{
+    text-decoration: none;
+}
+.nav_20 {
+  width: 710px;
+  float: left;
+  padding-top: 10px;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-end: 0px;
+  margin-inline-start: 0px;
+  padding-inline-start: 0px;
+}
+.nav_20 li {
+  float: left;
+  font-size: 16px;
+  padding: 0 17px;
+}
+.nav_20 li a {
+  color: #2e2e30;
+  text-decoration: none;
+}
+.nav_20 li .home {
+  color: #18ae66;
+  position: relative;
+}
+
+.nav_20 li .home a {
+  color: #18ae66;
+}
+
+.nav_20 li .home:before {
+  content: "";
+  width: 16px;
+  height: 4px;
+  background: #18ae66;
+  border-radius: 2px;
+  position: absolute;
+  bottom: -12px;
+  left: 24%;
+}
+.nav_20 li a:hover {
+  color: #18ae66;
+}
+.nav_20 li #CurrentlyNode1 a,
+.nav_20 li:hover a {
+  color: #18ae66;
+  position: relative;
+}
+
+.nav_20 li #CurrentlyNode,
+.nav_20 li #CurrentlyPathNode {
+  color: #18ae66;
+  position: relative;
+}
+
+.nav_20 li #CurrentlyNode:before,
+.nav_20 li #CurrentlyPathNode:before,
+.nav_20 li #CurrentlyNode1 a:before,
+.nav_20 li:hover a:before {
+  content: "";
+  width: 16px;
+  height: 4px;
+  background: #18ae66;
+  border-radius: 2px;
+  position: absolute;
+  bottom: -12px;
+  left: 38%;
+}
+
+.nav_20 li #CurrentlyNode a,
+.nav_20 li #CurrentlyPathNode a {
+  color: #18ae66;
+}
+.jt_sou {
+  display: inline-block;
+  width: 278px;
+  *width: 282px;
+  height: 28px;
+  *height: 32px;
+  border: 1px solid #eaeaee;
+  border-radius: 4px;
+  overflow: hidden;
+  float: right;
+  padding: 2px;
+  margin-top: 15px;
+}
+
+.jt_sou input {
+  width: 210px;
+  line-height: 28px;
+  text-indent: 10px;
+  border: none;
+  outline: none;
+  float: left;
+  height: 28px;
+  font-size: 12px;
+  color: #000;
+}
+
+.jt_sou input text {
+  color: #000;
+}
+
+.jt_sou button {
+  width: 64px;
+  height: 28px;
+  float: right;
+  border: none;
+  background: #18ae66;
+  line-height: 28px;
+  border-radius: 2px;
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+}
+.swiper {
+  width: 1200px;
+  height: 400px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.bus {
+  width: 1200px;
+  margin: auto;
+  display: block;
+  padding: 12px 0;
+  overflow: hidden;
+}
+.bus img {
+  width: 36px;
+  height: 34px;
+  vertical-align: middle;
+}
+
+.bus li {
+  width: 180px;
+  height: 72px;
+  line-height: 72px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px 0 rgba(2, 18, 40, 0.06);
+  border-radius: 4px;
+  float: left;
+  text-align: center;
+  margin-right: 23px;
+}
+.bus li a {
+  font-size: 16px;
+  font-weight: bold;
+  padding-left: 10px;
+  color: #2e2e30;
+  text-decoration: none;
+}
+.blank40 {
+  width: 1200px;
+  height: 10px;
+  // clear: none;
+  margin: auto;
+}
+.focus {
+  width: 486px;
+  float: left;
+  height: 364px;
+  background: #f6f6fa;
+  overflow: hidden;
+  position: absolute;
+  left: 350px;
+}
+.focus_new {
+    width: 690px;
+    height: 364px;
+    position: relative;
+    margin-right: 352px;
+}
+.right{
+    float: right;
+}
+.push_a {
+    position: absolute;
+    right: 0;
+    top: -220px;
+    z-index: 999;
+}
+.push_a img{
+    z-index: 9999;
+}
+.tab_title,
+.tabs2 {
+    border-bottom: solid #EAEAEE 1px;
+    clear: both;
+    overflow: hidden;
+    zoom: 1;
+    margin-bottom: 20px;
+    height: 41px;
+}
+
+.tab_title h2,
+.tabs2 a {
+    float: left;
+    padding: 0 14px;
+    height: 37px;
+    text-align: center;
+    line-height: 35px;
+    font-size: 22px;
+    color: #2E2E30;
+    cursor: pointer;
+    margin-right: 14px;
+}
+
+.tab_title h2.on,
+.tabs2 a.active2 {
+    padding: 0 14px;
+    border-bottom: solid #18AE66 4px;
+    font-weight: bold;
+}
+
+.tab_title h2.on a {
+    color: #2E2E30;
+    float: left;
+    height: 37px;
+    text-align: center;
+    line-height: 35px;
+    font-size: 22px;
+    color: #2E2E30;
+    cursor: pointer;
+    margin-right: 14px;
+    padding: 0px 13px;
+}
+.tab_title a{
+    color: #000;
+}
+.tab_list ul.newfix {
+    border-bottom: 1px #EAEAEE solid;
+    height: 104px;
+    margin-bottom: 20px;
+}
+
+.tab_list ul.newfix li #ReportIDname,
+.tab_list ul.newfix li #ReportIDnewquota {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.tab_list ul.newfix li #ReportIDname a,
+.tab_list ul.newfix li #ReportIDnewquota a {
+    color: #2E2E30;
+    padding-left: 20px;
+}
+
+.tab_list ul.newfix li #ReportIDLogograph {
+    color: #8E8E92;
+    line-height: 22px;
+    font-size: 16px;
+    padding-left: 18px;
+    display: block;
+}
+.newlist li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 19px;
+    font-size: 18px;
+    overflow: hidden;
+    zoom: 1;
+    height: 20px;
+    line-height: 20px;
+}
+
+.tab_list ul.newfix li {
+    position: relative;
+}
+
+.tab_list ul.newfix li::before,
+.newlist li::before {
+    content: "";
+    background: #D8D8DC;
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    top: 9px;
+    left: 5px;
+    border-radius: 4px;
+}
+.newlist li #ReportIDname {
+  float: left;
+}
+
+.newlist li #ReportIDIssueTime,
+.newlist li #StampIDrtime {
+  float: right;
+  color: #939393;
+  font-size: 12px;
+}
+
+.newlist li #ReportIDname a {
+  float: left
+}
+
+.newlist li #ReportIDname a:hover,
+.newlist li #StampIDsubject a:hover {
+  color: #006d46
+}
+
+.newlist li #ReportIDname .voice {
+  float: right;
+  width: 18px;
+  height: 10px;
+  background: url(/res/branch/structure/180562039.gif) no-repeat left top;
+  margin: 6px 0 0 6px;
+}

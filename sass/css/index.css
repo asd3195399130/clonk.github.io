@@ -1,0 +1,69 @@
+@charset "UTF-8";
+/* 定义变量与值 */
+/* 使用变量 */
+body {
+  background-color: lightblue;
+  color: red;
+  font-size: 18px;
+}
+
+p {
+  font-size: 12px;
+}
+
+h1 {
+  color: red;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: lowercase;
+  text-overflow: hidden;
+}
+
+#main p {
+  color: #00ff00;
+  width: 97%;
+}
+
+#main p .redbox {
+  background-color: #ff0000;
+  color: #000000;
+}
+
+#main {
+  width: 97%;
+  background-color: #000000;
+}
+
+#main p,
+#main div {
+  font-size: 2em;
+}
+
+#main p a,
+#main div a {
+  font-weight: bold;
+}
+
+#main pre {
+  font-size: 3em;
+} 
+
+/*# sourceMappingURL=index.css.map */

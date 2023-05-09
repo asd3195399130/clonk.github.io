@@ -1,0 +1,18 @@
+@charset "UTF-8";
+/* 定义变量与值 */
+/* 使用变量 */
+body {
+  background-color: lightblue;
+  color: red;
+  font-size: 18px;
+}
+
+p {
+  font-size: 12px;
+}
+
+h1 {
+  color: red;
+} 
+
+/*# sourceMappingURL=nes.css.map */

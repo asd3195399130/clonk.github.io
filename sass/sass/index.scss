@@ -1,0 +1,85 @@
+/* 定义变量与值 */
+$bgcolor: lightblue;
+$textcolor: red;
+$fontsize: 18px;
+$mysmallsize: 12px;
+
+/* 使用变量 */
+body {
+  background-color: $bgcolor;
+  color: $textcolor;
+  font-size: $fontsize;
+}
+p{
+  font-size: $mysmallsize;
+}
+h1{
+  color: $textcolor;
+}
+
+nav {
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        display: inline-block;
+    }
+
+    a {
+        display: block;
+        padding: 6px 12px;
+        text-decoration: none;
+        a {
+                font-weight: bold;
+                text-decoration: none;
+        
+                &:hover {
+                    text-decoration: underline;
+                }
+        
+                body.firefox & {
+                    font-weight: normal;
+                }
+            }
+        font: {
+                family: Helvetica, sans-serif;
+                size: 18px;
+                weight: bold;
+            }
+        
+            text: {
+                align: center;
+                transform: lowercase;
+                overflow: hidden;
+            }
+    }
+
+}
+#main p {
+    color: #00ff00;
+    width: 97%;
+
+    .redbox {
+        background-color: #ff0000;
+        color: #000000;
+    }
+}
+#main {
+    width: 97%;
+
+    p,
+    div {
+        font-size: 2em;
+
+        a {
+            font-weight: bold;
+        }
+    }
+
+    pre {
+        font-size: 3em;
+    }
+}
