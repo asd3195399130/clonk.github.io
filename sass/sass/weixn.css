@@ -606,4 +606,71 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+.footer-wrp {
+  height: 115px;
+}
+
+.footer {
+  position: absolute;
+  text-align: center;
+  color: hsla(0, 0%, 100%, 0.7);
+  background-color: #fff;
+  padding: 40px 0 32px;
+  width: 100%;
+  bottom: 0;
+}
+
+.footer__bd {
+  line-height: 1;
+}
+
+.footer__links {
+  display: inline-flex;
+  font-size: 13px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+  padding: 0 24px;
+  justify-content: center;
+  line-height: 1.6;
+}
+
+.footer a {
+  margin: 0 8px;
+}
+
+.footer a:link,
+.footer a:visited {
+  color: rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: rgba(0, 0, 0, 0.7);
+  text-decoration: underline;
+}
+
+.footer .footer__record {
+  display: block;
+  color: #000 !important;
+  opacity: 0.5;
+  font-size: 12px;
+  line-height: 17px;
+}
+
+.footer .footer__record:visited {
+  color: #000;
+}
+
+.footer__copyright {
+  color: #000;
+  opacity: 0.5;
+  font-size: 12px;
+  margin-top: 2px;
+  line-height: 17px;
+}
+
+.graytext {
+  color: rgba(0, 0, 0, 0.7);
 }/*# sourceMappingURL=weixn.css.map */
