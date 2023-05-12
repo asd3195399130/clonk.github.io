@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h4 {
+  display: inline-block;
+}
+
+#box {
+  width: 1200px;
+  margin: auto;
+  background: #abbaab;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  transition: transform 0.2s ease-in-out;
+}
+
+.hears {
+  width: 150px;
+  height: 150px;
+  background-color: #061161;
+  border: 1px solid #061161;
+  border-radius: 10%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.hears:hover {
+  transform: translateY(-15px);
+}
+
+.center {
+  width: 570px;
+  height: 500px;
+  background-color: #d3cce3;
+  margin-top: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.charset .button {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: -17px;
+}
+
+button {
+  width: 60px;
+  height: 30px;
+  margin-left: 15px;
+  border: none;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  background-color: #061161;
+  color: #e9e4f0;
+}
+
+button:hover {
+  transform: translate(-16px, 5px);
+}
+
+.right {
+  width: 570px;
+  height: 500px;
+  background-color: #d3cce3;
+  float: right;
+  margin-top: -500px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.button1 {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: -17px;
+}
+
+.foot {
+  width: 100%;
+  height: 600px;
+  background-color: #d3cce3;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  margin-top: 30px;
+}
+
+.button-foot {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: -17px;
+}
+
+.foot-boos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bos {
+  width: 500px;
+  height: 80%;
+  background-color: #e9e4f0;
+  margin-top: 66px;
+  margin-left: 50px;
+}
+
+.foot-one {
+  width: 173px;
+  height: 150px;
+  background-color: #061161;
+  border: 1px solid #061161;
+  border-radius: 10%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  margin-left: 54px;
+  margin-top: 10px;
+}
+
+.foot-one:hover {
+  transform: translate(-15px, 5px);
+}
+
+input {
+  margin-left: 5px;
+}
+
+.violet {
+  color: #c471ed;
+}
+
+.red {
+  color: #f12711;
+}
+
+.green {
+  color: #11998e;
+}
+
+.blue {
+  color: #2980b9;
+}
+
+.orange {
+  color: #f5af19;
+}
+
+.gold {
+  color: #ff416c;
+}
+
+h2 {
+  margin-top: 20px;
+}
+
+span {
+  display: block;
+  color: #abbaab;
+}
+
+h3 {
+  color: #11998e;
+}
+
+#btn {
+  width: 570px;
+  height: 30px;
+}
+
+#buttom {
+  width: 500px;
+  height: 500px;
+  background-color: #061161;
+}
+
+#btn1 {
+  width: 570px;
+  height: 30px;
+}
+
+#chars {
+  float: right;
+  margin-top: -545px;
+}
+
+#right {
+  width: 500px;
+  height: 500px;
+  background-color: #061161;
+  float: right;
+  margin-top: -500px;
+}/*# sourceMappingURL=代办.css.map */

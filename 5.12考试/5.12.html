@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./echarts/echart.min.js"></script>
+    <link rel="stylesheet" href="./sass/代办.css" />
+  </head>
+  <style></style>
+  <body>
+    <div id="box">
+      <h4>待办事项:</h4>
+      <nav class="hear">
+        <div class="hears">
+          <h3>代发货订单:</h3>
+          <span>单位(笔):</span>
+          <h2 class="violet">0</h2>
+        </div>
+        <div class="hears">
+          <h3>代发货订单:</h3>
+          <span>单位(笔):</span>
+          <h2 class="red">0</h2>
+        </div>
+        <div class="hears">
+          <h3>代发货订单:</h3>
+          <span>单位(笔):</span>
+          <h2 class="green">0</h2>
+        </div>
+        <div class="hears">
+          <h3>代发货订单:</h3>
+          <span>单位(笔):</span>
+          <h2 class="blue">4</h2>
+        </div>
+        <div class="hears">
+          <h3>代发货订单:</h3>
+          <span>单位(笔):</span>
+          <h2 class="orange">4</h2>
+        </div>
+        <div class="hears">
+          <h3>代发货订单:</h3>
+          <span>单位(笔):</span>
+          <h2 class="gold">4</h2>
+        </div>
+      </nav>
+      <div id="charset" class="charset">
+        <h4>新增会员</h4>
+        <div id="btn" class="button">
+          <button id="button1">近30日</button>
+          <button id="button2">近七日</button>
+          <button id="button3">昨天</button>
+          <button id="button4">今天</button>
+        </div>
+      </div>
+
+      <div class="center" id="center"></div>
+      <div id="chars">
+        <h4>新增订单</h4>
+        <div id="btn1" class="button1">
+          <button>近30日</button>
+          <button>近七日</button>
+          <button>昨天</button>
+          <button>今天</button>
+        </div>
+      </div>
+
+      <div class="right" id="charp"></div>
+      <div style="clear: both"></div>
+      <div class="foot">
+        <h4>运营数据</h4>
+        <div id="foot" class="button-foot">
+          <button id="foots">近30日</button>
+          <button id="foot1">近七日</button>
+          <button id="foot2">昨天</button>
+          <button id="foot3">今天</button>
+          <input type="date" name="" id="" />
+          <input type="date" name="" id="" />
+        </div>
+        <div class="foot-boos bos">
+          <div class="foot-one">
+            <h3>代发货订单:</h3>
+            <span>单位(笔):</span>
+            <h2 class="violet">0</h2>
+          </div>
+          <div class="foot-one">
+            <h3>代发货订单:</h3>
+            <span>单位(笔):</span>
+            <h2 class="red">0</h2>
+          </div>
+          <div class="foot-one">
+            <h3>代发货订单:</h3>
+            <span>单位(笔):</span>
+            <h2 class="res">0</h2>
+          </div>
+          <div class="foot-one">
+            <h3>代发货订单:</h3>
+            <span>单位(笔):</span>
+            <h2 class="pot">0</h2>
+          </div>
+          <div class="foot-one">
+            <h3>代发货订单:</h3>
+            <span>单位(笔):</span>
+            <h2 class="sct">0</h2>
+          </div>
+          <div class="foot-one">
+            <h3>代发货订单:</h3>
+            <span>单位(笔):</span>
+            <h2 class="bost">0</h2>
+          </div>
+        </div>
+        <div id="right"></div>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.js"></script>
+  <script>
+    var chartDom = document.getElementById("right");
+
+    var myChart = echarts.init(chartDom);
+    var option;
+
+    option = {
+      title: {
+        text: "今天的气温",
+      },
+      tooltip: {
+        trigger: "axis",
+      },
+      legend: {},
+      toolbox: {
+        show: true,
+        feature: {
+          dataZoom: {
+            yAxisIndex: "none",
+          },
+          dataView: { readOnly: false },
+          magicType: { type: ["line", "bar"] },
+          restore: {},
+          saveAsImage: {},
+        },
+      },
+      xAxis: {
+        type: "category",
+        boundaryGap: false,
+        data: [
+          "16:10",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00",
+        ],
+      },
+      yAxis: {
+        type: "value",
+        axisLabel: {
+          formatter: "{value} °C",
+        },
+      },
+      series: [
+        {
+          name: "最高温度",
+          type: "line",
+          data: [18, 17, 15, 16, 14, 18, 19, 11],
+          markPoint: {
+            data: [
+              { type: "max", name: "Max" },
+              { type: "min", name: "Min" },
+            ],
+          },
+          markLine: {
+            data: [{ type: "average", name: "Avg" }],
+          },
+        },
+        {
+          name: "最低温度",
+          type: "line",
+          data: [17, 16, 12, 15, 13, 12, 10, 10],
+          markPoint: {
+            data: [{ name: "周最低", value: -2, xAxis: 1, yAxis: -1.5 }],
+          },
+          markLine: {
+            data: [
+              { type: "average", name: "Avg" },
+              [
+                {
+                  symbol: "none",
+                  x: "90%",
+                  yAxis: "max",
+                },
+                {
+                  symbol: "circle",
+                  label: {
+                    position: "start",
+                    formatter: "Max",
+                  },
+                  type: "max",
+                  name: "最高点",
+                },
+              ],
+            ],
+          },
+        },
+      ],
+    };
+
+    option && myChart.setOption(option);
+  </script>
+  <script>
+    $("foots").click(function () {
+      $("blue").html(310);
+      var chartDom = document.getElementById("charp");
+
+      var myChart = echarts.init(chartDom);
+      var option;
+      option = {
+        backgroundColor: "#fff",
+        xAxis: {
+          data: ["5/12", "5.13", "5.15", "5.20", "5.23", "5.30", "6.10"],
+        },
+        yAxis: {},
+        series: [
+          {
+            type: "bar",
+            //  barWidth:20,
+            z: 10,
+            itemStyle: {
+              color: {
+                x: 1,
+                y: 0,
+                x2: 0,
+                y2: 0,
+                type: "linear",
+                global: false,
+                colorStops: [
+                  {
+                    offset: 0,
+                    color: "#b0b513",
+                  },
+                  {
+                    offset: 0.5,
+                    color: "#b0b513",
+                  },
+                  {
+                    offset: 0.5,
+                    color: "#bec81a",
+                  },
+                  {
+                    offset: 1,
+                    color: "#dcdc3c",
+                  },
+                ],
+              },
+            },
+            data: [220, 182, 191, 234, 290, 330, 310],
+          },
+          {
+            name: "最高温",
+            type: "pictorialBar",
+            symbol: "diamond",
+            symbolSize: [80, 20],
+            symbolOffset: [-0, 10],
+            z: 1,
+            itemStyle: {
+              color: {
+                x: 1,
+                y: 0,
+                x2: 0,
+                y2: 0,
+                type: "linear",
+                global: false,
+                colorStops: [
+                  {
+                    offset: 0,
+                    color: "#b0b513",
+                  },
+                  {
+                    offset: 0.5,
+                    color: "#b0b513",
+                  },
+                  {
+                    offset: 0.5,
+                    color: "#bec81a",
+                  },
+                  {
+                    offset: 1,
+                    color: "#dcdc3c",
+                  },
+                ],
+              },
+            },
+            data: [1, 1, 1, 1, 1, 1, 1],
+          },
+          {
+            name: "最低温",
+            type: "pictorialBar",
+            symbol: "diamond",
+            symbolPosition: "end",
+            symbolSize: [80, 20],
+            symbolOffset: [-0, -10],
+            z: 20,
+            itemStyle: {
+              opacity: 1,
+              color: "#dcdc3c",
+            },
+            data: [220, 182, 191, 234, 290, 330, 310],
+          },
+        ],
+      };
+      option && myChart.setOption(option);
+    });
+    var chartDom = document.getElementById("charp");
+
+    var myChart = echarts.init(chartDom);
+    var option;
+    option = {
+      backgroundColor: "#fff",
+      xAxis: {
+        data: ["周一", "周二", "周三", "周四", "周五", "周六", "周六"],
+      },
+      yAxis: {},
+      series: [
+        {
+          type: "bar",
+          //  barWidth:20,
+          z: 10,
+          itemStyle: {
+            color: {
+              x: 1,
+              y: 0,
+              x2: 0,
+              y2: 0,
+              type: "linear",
+              global: false,
+              colorStops: [
+                {
+                  offset: 0,
+                  color: "#b0b513",
+                },
+                {
+                  offset: 0.5,
+                  color: "#b0b513",
+                },
+                {
+                  offset: 0.5,
+                  color: "#bec81a",
+                },
+                {
+                  offset: 1,
+                  color: "#dcdc3c",
+                },
+              ],
+            },
+          },
+          data: [220, 182, 191, 234, 290, 330, 310],
+        },
+        {
+          name: "最高温",
+          type: "pictorialBar",
+          symbol: "diamond",
+          symbolSize: [80, 20],
+          symbolOffset: [-0, 10],
+          z: 1,
+          itemStyle: {
+            color: {
+              x: 1,
+              y: 0,
+              x2: 0,
+              y2: 0,
+              type: "linear",
+              global: false,
+              colorStops: [
+                {
+                  offset: 0,
+                  color: "#b0b513",
+                },
+                {
+                  offset: 0.5,
+                  color: "#b0b513",
+                },
+                {
+                  offset: 0.5,
+                  color: "#bec81a",
+                },
+                {
+                  offset: 1,
+                  color: "#dcdc3c",
+                },
+              ],
+            },
+          },
+          data: [1, 1, 1, 1, 1, 1, 1],
+        },
+        {
+          name: "最低温",
+          type: "pictorialBar",
+          symbol: "diamond",
+          symbolPosition: "end",
+          symbolSize: [80, 20],
+          symbolOffset: [-0, -10],
+          z: 20,
+          itemStyle: {
+            opacity: 1,
+            color: "#dcdc3c",
+          },
+          data: [220, 182, 191, 234, 290, 330, 310],
+        },
+      ],
+    };
+    option && myChart.setOption(option);
+  </script>
+  <script>
+    $("#button4").click(function () {
+      var chartDom = document.getElementById("center");
+
+      var myChart = echarts.init(chartDom);
+      var option;
+
+      option = {
+        title: {
+          text: "今天的气温",
+        },
+        tooltip: {
+          trigger: "axis",
+        },
+        legend: {},
+        toolbox: {
+          show: true,
+          feature: {
+            dataZoom: {
+              yAxisIndex: "none",
+            },
+            dataView: { readOnly: false },
+            magicType: { type: ["line", "bar"] },
+            restore: {},
+            saveAsImage: {},
+          },
+        },
+        xAxis: {
+          type: "category",
+          boundaryGap: false,
+          data: [
+            "16:10",
+            "17:00",
+            "18:00",
+            "19:00",
+            "20:00",
+            "21:00",
+            "22:00",
+            "23:00",
+          ],
+        },
+        yAxis: {
+          type: "value",
+          axisLabel: {
+            formatter: "{value} °C",
+          },
+        },
+        series: [
+          {
+            name: "最高温度",
+            type: "line",
+            data: [18, 17, 15, 16, 14, 18, 19, 11],
+            markPoint: {
+              data: [
+                { type: "max", name: "Max" },
+                { type: "min", name: "Min" },
+              ],
+            },
+            markLine: {
+              data: [{ type: "average", name: "Avg" }],
+            },
+          },
+          {
+            name: "最低温度",
+            type: "line",
+            data: [17, 16, 12, 15, 13, 12, 10, 10],
+            markPoint: {
+              data: [{ name: "周最低", value: -2, xAxis: 1, yAxis: -1.5 }],
+            },
+            markLine: {
+              data: [
+                { type: "average", name: "Avg" },
+                [
+                  {
+                    symbol: "none",
+                    x: "90%",
+                    yAxis: "max",
+                  },
+                  {
+                    symbol: "circle",
+                    label: {
+                      position: "start",
+                      formatter: "Max",
+                    },
+                    type: "max",
+                    name: "最高点",
+                  },
+                ],
+              ],
+            },
+          },
+        ],
+      };
+
+      option && myChart.setOption(option);
+    });
+    $("#button3").click(function () {
+      $(".green").html(15);
+      var chartDom = document.getElementById("center");
+
+      var myChart = echarts.init(chartDom);
+      var option;
+
+      option = {
+        title: {
+          text: "昨天的气温",
+        },
+        tooltip: {
+          trigger: "axis",
+        },
+        legend: {},
+        toolbox: {
+          show: true,
+          feature: {
+            dataZoom: {
+              yAxisIndex: "none",
+            },
+            dataView: { readOnly: false },
+            magicType: { type: ["line", "bar"] },
+            restore: {},
+            saveAsImage: {},
+          },
+        },
+        xAxis: {
+          type: "category",
+          boundaryGap: false,
+          data: [
+            "0:00",
+            "1:00",
+            "2:00",
+            "3:00",
+            "4:00",
+            "5:00",
+            "6:00",
+            "7:00",
+            "8:00",
+            "9:00",
+            "10:00",
+            "11:00",
+            "12:00",
+            "13:00",
+            "14:00",
+            "13:00",
+            "16:00",
+            "17:00",
+            "18:00",
+            "19:00",
+            "20:00",
+            "21:00",
+            "22:00",
+            "23:00",
+          ],
+        },
+        yAxis: {
+          type: "value",
+          axisLabel: {
+            formatter: "{value} °C",
+          },
+        },
+        series: [
+          {
+            name: "最高温度",
+            type: "line",
+            data: [
+              18, 17, 15, 16, 14, 18, 19, 11, 10, 12, 13, 20, 17, 18, 11, 15,
+              14, 10, 13, 16, 10, 13, 15, 17,
+            ],
+            markPoint: {
+              data: [
+                { type: "max", name: "Max" },
+                { type: "min", name: "Min" },
+              ],
+            },
+            markLine: {
+              data: [{ type: "average", name: "Avg" }],
+            },
+          },
+          {
+            name: "最低温度",
+            type: "line",
+            data: [
+              17, 16, 12, 15, 13, 12, 10, 10, 9, 6, 5, 7, 10, 11, 12, 6, 9, 8,
+              7, 5, 10, 12, 16, 15, 11, 10, 8, 6,
+            ],
+            markPoint: {
+              data: [{ name: "周最低", value: -2, xAxis: 1, yAxis: -1.5 }],
+            },
+            markLine: {
+              data: [
+                { type: "average", name: "Avg" },
+                [
+                  {
+                    symbol: "none",
+                    x: "90%",
+                    yAxis: "max",
+                  },
+                  {
+                    symbol: "circle",
+                    label: {
+                      position: "start",
+                      formatter: "Max",
+                    },
+                    type: "max",
+                    name: "最高点",
+                  },
+                ],
+              ],
+            },
+          },
+        ],
+      };
+
+      option && myChart.setOption(option);
+    });
+    $("#button2").click(function () {
+      $(".red").html(30);
+      var chartDom = document.getElementById("center");
+
+      var myChart = echarts.init(chartDom);
+      var option;
+
+      option = {
+        title: {
+          text: "未来七天的气温",
+        },
+        tooltip: {
+          trigger: "axis",
+        },
+        legend: {},
+        toolbox: {
+          show: true,
+          feature: {
+            dataZoom: {
+              yAxisIndex: "none",
+            },
+            dataView: { readOnly: false },
+            magicType: { type: ["line", "bar"] },
+            restore: {},
+            saveAsImage: {},
+          },
+        },
+        xAxis: {
+          type: "category",
+          boundaryGap: false,
+          data: [
+            "2023-05-13",
+            "2023-05-14",
+            "2023-05-15",
+            "2023-05-16",
+            "2023-05-17",
+            "2023-05-18",
+            "2023-05-19",
+            "2023-05-20",
+            "2023-05-21",
+          ],
+        },
+        yAxis: {
+          type: "value",
+          axisLabel: {
+            formatter: "{value} °C",
+          },
+        },
+        series: [
+          {
+            name: "最高温度",
+            type: "line",
+            data: [22, 22, 22, 21, 22, 28, 31, 32, 33, 31, 33],
+            markPoint: {
+              data: [
+                { type: "max", name: "Max" },
+                { type: "min", name: "Min" },
+              ],
+            },
+            markLine: {
+              data: [{ type: "average", name: "Avg" }],
+            },
+          },
+          {
+            name: "最低温度",
+            type: "line",
+            data: [12, 12, 15, 13, 15, 15, 17, 28, 32, 30, 29],
+            markPoint: {
+              data: [{ name: "周最低", value: -2, xAxis: 1, yAxis: -1.5 }],
+            },
+            markLine: {
+              data: [
+                { type: "average", name: "Avg" },
+                [
+                  {
+                    symbol: "none",
+                    x: "90%",
+                    yAxis: "max",
+                  },
+                  {
+                    symbol: "circle",
+                    label: {
+                      position: "start",
+                      formatter: "Max",
+                    },
+                    type: "max",
+                    name: "最高点",
+                  },
+                ],
+              ],
+            },
+          },
+        ],
+      };
+
+      option && myChart.setOption(option);
+    });
+    $("#button1").on("click", function () {
+      $(".violet").html(4);
+      var chartDom = document.getElementById("center");
+
+      var myChart = echarts.init(chartDom);
+      var option;
+
+      option = {
+        title: {
+          text: "今天的气温",
+        },
+        tooltip: {
+          trigger: "axis",
+        },
+        legend: {},
+        toolbox: {
+          show: true,
+          feature: {
+            dataZoom: {
+              yAxisIndex: "none",
+            },
+            dataView: { readOnly: false },
+            magicType: { type: ["line", "bar"] },
+            restore: {},
+            saveAsImage: {},
+          },
+        },
+        xAxis: {
+          type: "category",
+          boundaryGap: false,
+          data: [
+            "16:10",
+            "17:00",
+            "18:00",
+            "19:00",
+            "20:00",
+            "21:00",
+            "22:00",
+            "23:00",
+          ],
+        },
+        yAxis: {
+          type: "value",
+          axisLabel: {
+            formatter: "{value} °C",
+          },
+        },
+        series: [
+          {
+            name: "最高温度",
+            type: "line",
+            data: [18, 17, 15, 16, 14, 18, 19, 11],
+            markPoint: {
+              data: [
+                { type: "max", name: "Max" },
+                { type: "min", name: "Min" },
+              ],
+            },
+            markLine: {
+              data: [{ type: "average", name: "Avg" }],
+            },
+          },
+          {
+            name: "最低温度",
+            type: "line",
+            data: [17, 16, 12, 15, 13, 12, 10, 10],
+            markPoint: {
+              data: [{ name: "周最低", value: -2, xAxis: 1, yAxis: -1.5 }],
+            },
+            markLine: {
+              data: [
+                { type: "average", name: "Avg" },
+                [
+                  {
+                    symbol: "none",
+                    x: "90%",
+                    yAxis: "max",
+                  },
+                  {
+                    symbol: "circle",
+                    label: {
+                      position: "start",
+                      formatter: "Max",
+                    },
+                    type: "max",
+                    name: "最高点",
+                  },
+                ],
+              ],
+            },
+          },
+        ],
+      };
+
+      myChart.setOption(option);
+    });
+    var chartDom = document.getElementById("center");
+
+    var myChart = echarts.init(chartDom);
+    var option;
+
+    option = {
+      title: {
+        text: "今天的气温",
+      },
+      tooltip: {
+        trigger: "axis",
+      },
+      legend: {},
+      toolbox: {
+        show: true,
+        feature: {
+          dataZoom: {
+            yAxisIndex: "none",
+          },
+          dataView: { readOnly: false },
+          magicType: { type: ["line", "bar"] },
+          restore: {},
+          saveAsImage: {},
+        },
+      },
+      xAxis: {
+        type: "category",
+        boundaryGap: false,
+        data: [
+          "16:10",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00",
+        ],
+      },
+      yAxis: {
+        type: "value",
+        axisLabel: {
+          formatter: "{value} °C",
+        },
+      },
+      series: [
+        {
+          name: "最高温度",
+          type: "line",
+          data: [18, 17, 15, 16, 14, 18, 19, 11],
+          markPoint: {
+            data: [
+              { type: "max", name: "Max" },
+              { type: "min", name: "Min" },
+            ],
+          },
+          markLine: {
+            data: [{ type: "average", name: "Avg" }],
+          },
+        },
+        {
+          name: "最低温度",
+          type: "line",
+          data: [17, 16, 12, 15, 13, 12, 10, 10],
+          markPoint: {
+            data: [{ name: "周最低", value: -2, xAxis: 1, yAxis: -1.5 }],
+          },
+          markLine: {
+            data: [
+              { type: "average", name: "Avg" },
+              [
+                {
+                  symbol: "none",
+                  x: "90%",
+                  yAxis: "max",
+                },
+                {
+                  symbol: "circle",
+                  label: {
+                    position: "start",
+                    formatter: "Max",
+                  },
+                  type: "max",
+                  name: "最高点",
+                },
+              ],
+            ],
+          },
+        },
+      ],
+    };
+
+    myChart.setOption(option);
+  </script>
+</html>
